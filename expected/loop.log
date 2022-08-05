@@ -1,0 +1,440 @@
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000000 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ? |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000000 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000060 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+
+ ping 
+------
+    4
+(1 row)
+
+Name |  Node |  Host:Port |       TLI: LSN |   Connection |       Current State |      Assigned State
+-----+-------+------------+----------------+--------------+---------------------+--------------------
+ pg2 |     1 |   pg2:5432 |   1: 0/3000140 |   read-write |        wait_primary |        wait_primary
+ pg1 |     2 |   pg1:5432 |         1: 0/0 |       none ! |        wait_standby |          catchingup
+
+ ping 
+------
+    1
+(1 row)
+
+ ping 
+------
+    2
+(1 row)
+
+ ping 
+------
+    3
+(1 row)
+

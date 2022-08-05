@@ -17,7 +17,7 @@ fctLoop() {
 echo "#############################################################"
 echo "# Starting env"
 docker-compose up -d
-sleep 4
+sleep 5
 docker-compose exec -T mon psql -b pg_auto_failover -c "ALTER SYSTEM SET pgautofailover.health_check_period TO 4000;"
 docker-compose exec -T mon psql -b pg_auto_failover -c "ALTER SYSTEM SET pgautofailover.health_check_retry_delay  TO 400;"
 docker-compose exec -T mon psql -b pg_auto_failover -c "ALTER SYSTEM SET  pgautofailover.health_check_timeout  TO 1000;"
@@ -41,3 +41,9 @@ sleep 10
 wait
 
 # docker-compose down
+
+if diff -r expected results; then
+    echo "tests ok"
+else
+    echo "tests FAILED !!!"
+fi
