@@ -1,6 +1,7 @@
 version: "3.9"  # optional since v1.27.0
 services:
   mon:
+    hostname: mon
     image: citusdata/pg_auto_failover:demo
     environment:
       PGDATA: /tmp/pgaf
@@ -9,6 +10,7 @@ services:
     expose:
       - 5432
   pg1:
+    hostname: pg1
     image: citusdata/pg_auto_failover:demo
     environment:
       PGDATA: /tmp/pgaf
@@ -20,11 +22,13 @@ services:
       "--pg-hba-lan",
       "--username", "ad",
       "--dbname", "analytics",
+      "--name", "pg1",
       "--monitor", "postgresql://autoctl_node@mon/pg_auto_failover",
       "--run"]
     expose:
       - 5432
   pg2:
+    hostname: pg2
     image: citusdata/pg_auto_failover:demo
     environment:
       PGDATA: /tmp/pgaf
@@ -36,11 +40,13 @@ services:
       "--pg-hba-lan",
       "--username", "ad",
       "--dbname", "analytics",
+      "--name", "pg2",
       "--monitor", "postgresql://autoctl_node@mon/pg_auto_failover",
       "--run"]
     expose:
       - 5432
   lb:
+    hostname: lb
     image: edoburu/pgbouncer
     environment:
        - DB_HOST=pg1,pg2
@@ -50,11 +56,11 @@ services:
     depends_on:
       - pg1
       - pg2
-  tst:
-    image: postgres
-    environment:
-      - POSTGRES_PASSWORD=postgres
-    command: ["docker-entrypoint.sh", "-c", "log_statement=all"]
+  app:
+    hostname: app
+    image: postgres:14.4
+    # command: ["bash", "-c", "sleep 100000"]
+    command: ["bash", "-c", "sleep 100000"]
     depends_on:
       - lb
     volumes:
