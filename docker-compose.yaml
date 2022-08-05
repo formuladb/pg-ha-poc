@@ -1,6 +1,6 @@
 version: "3.9"  # optional since v1.27.0
 services:
-  monitor:
+  mon:
     image: citusdata/pg_auto_failover:demo
     environment:
       PGDATA: /tmp/pgaf
@@ -8,7 +8,7 @@ services:
     command: pg_autoctl create monitor --ssl-self-signed --auth trust --run
     expose:
       - 5432
-  node1:
+  pg1:
     image: citusdata/pg_auto_failover:demo
     environment:
       PGDATA: /tmp/pgaf
@@ -20,11 +20,11 @@ services:
       "--pg-hba-lan",
       "--username", "ad",
       "--dbname", "analytics",
-      "--monitor", "postgresql://autoctl_node@monitor/pg_auto_failover",
+      "--monitor", "postgresql://autoctl_node@mon/pg_auto_failover",
       "--run"]
     expose:
       - 5432
-  node2:
+  pg2:
     image: citusdata/pg_auto_failover:demo
     environment:
       PGDATA: /tmp/pgaf
@@ -36,28 +36,26 @@ services:
       "--pg-hba-lan",
       "--username", "ad",
       "--dbname", "analytics",
-      "--monitor", "postgresql://autoctl_node@monitor/pg_auto_failover",
+      "--monitor", "postgresql://autoctl_node@mon/pg_auto_failover",
       "--run"]
     expose:
       - 5432
-  pgbouncer:
+  lb:
     image: edoburu/pgbouncer
     environment:
-       - DB_USER=dbuser
-       - DB_PASSWORD=hbZkzny5xrvVH
-       - DB_HOST=node1,node2
-       - DB_NAME=test
-       - POOL_MODE=transaction
-       - ADMIN_USERS=postgres,dbuser
+       - DB_HOST=pg1,pg2
+       - AUTH_TYPE=trust
     ports:
       - "5432:5432"
     depends_on:
-      - node1
-      - node2
-  test:
+      - pg1
+      - pg2
+  tst:
     image: postgres
     environment:
       - POSTGRES_PASSWORD=postgres
     command: ["docker-entrypoint.sh", "-c", "log_statement=all"]
     depends_on:
-      - pgbouncer
+      - lb
+    volumes:
+      - $PWD:/work
